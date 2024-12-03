@@ -75,21 +75,30 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,87,121,1) 35%, rgb
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     display: flex;
     justify-content: space-around;
-
     background-color: rgb(17, 37, 106);
     color: #fff;
   }
   #body_div{
     width: 100%;
     height: 100vh;
-    border: solid;
+    border: 1px dotted;
     background-image: url("./scaled_1000311123.jpg");
-  
+    /* background-position: center; */
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    
+    animation: change 15s linear infinite ;
   }
-  
+  @keyframes change {
+    20%{
+      background-image: url(./scaled_1000311113.jpg) ;
+      /* transform: scale(1); */
+    } 
+    40%{
+      background-image: url(./scaled_1000311121.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }    
+  }
 
    .body_elements{
     text-align: center;
@@ -119,9 +128,10 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba
   #first_three_cards{
     width: 100%;
     height: 60vh;
-    border: solid #fff;
+    border: none;
     display: flex;
     justify-content: space-around;
+    margin-top: -50px;
   }
   .three_images{
         height: 60vh;
@@ -134,14 +144,23 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba
   .three_images:hover{
     transform: scale(1.1);
   }
+  #five_cards_main{
+    border:none;
+    /* display: flex;
+    flex-wrap:wrap;
+    margin: auto;
+    align-items: center;
+    justify-content: space-around; */
+    margin-top: 60px;
+  }
  #five_cards{
-    width: 100%;
+    width: 60%;
     height: 100vh;
     border: none;
     display: flex;
-    flex-wrap:wrap;
-    justify-content:space-around;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;    
+    margin:auto;
   
  }
 
@@ -175,15 +194,17 @@ img[alt~="inner5_cards"]{
     height: 320px ;
     border:none;
     
+    
 }
 #inner_div_cards_trans{
     width: 20%;
     height: 300px;
     border: none;
     display: flex;
+    /* align-items: center; */
     margin-left: 10%;
-    padding:0px 0px 0px  10%;
-    margin-top: -70px;
+    padding:0px 0px 0px  20%;
+    margin-top: -30px;
     /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
 }
 img[alt="images_three"]{
